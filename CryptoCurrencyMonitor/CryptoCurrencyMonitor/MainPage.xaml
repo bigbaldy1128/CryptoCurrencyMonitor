@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CryptoCurrencyMonitor.MainPage">
+
+    <StackLayout Margin="20,25,20,0">
+        <StackLayout Orientation="Vertical">
+            <Label Text="Address" FontSize="Large" FontAttributes="Bold" TextColor="Black" ></Label>
+            <Editor x:Name="editor_address"  FontSize="Small" TextColor="Black"></Editor>
+        </StackLayout>
+        <StackLayout Orientation="Vertical">
+            <Label Text="Quantity" FontSize="Large" FontAttributes="Bold" TextColor="Black" ></Label>
+            <Frame>
+                <StackLayout Orientation="Horizontal">
+                    <Label x:Name="label_quantity" FontSize="Medium" TextColor="Black"></Label>
+                    <Label x:Name="label_delta_quantity" FontSize="Medium" TextColor="Black"></Label>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Timestamp:" FontSize="Small"></Label>
+            <Label x:Name="label_timestamp" FontSize="Small"></Label>
+        </StackLayout>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button x:Name="button_get_data" Grid.Row="0" Grid.Column="0" Text="Get Data" Clicked="Handle_Clicked_Get_Data"/>
+            <Button Grid.Row="0" Grid.Column="1" Text="Clear" Clicked="Handle_Clicked_Clear"/>
+        </Grid>
+    </StackLayout>
+
+</ContentPage>
